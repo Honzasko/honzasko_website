@@ -1,0 +1,59 @@
+.block {
+    display: inline-block;
+    color:white;
+    text-align: center;
+    margin-left: 50px;
+    width:15rem;
+    height:16rem;
+    background-color: rgba(43, 43, 43, 0.7);
+    border-radius: 10px;
+    -webkit-box-shadow: -1px 1px 32px 8px rgba(0,0,0,0.2);
+    -moz-box-shadow: -1px 1px 32px 8px rgba(0,0,0,0.2);
+    box-shadow: -1px 1px 32px 8px rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+
+.block .icon {
+    margin-top: 10px;
+    width: 5rem;
+    height: 5rem;
+    filter:invert(1);
+}
+
+.block h2 {
+    font-weight: 1000;
+    position: relative;
+    top:7px;
+}
+
+.block .arrow {
+    border-radius: 10px;
+    background: none;
+    border: none;
+    text-align: center;
+    margin-top: 5px;
+    height: 3rem;
+    width: 3rem;
+}
+
+.block .arrow:hover {
+    background-color:  #183125;
+}
+
+.block .arrow img {
+    height: 2.5rem;
+    width: 2.5rem;
+    filter: invert(1);
+}
+
+@media (pointer:none), (pointer:coarse) {
+        .content {
+            margin-top: 17%;
+            margin-left: 10%;
+        }
+
+        .block .arrow:active {
+            background-color:  #6d6c6c ;
+        }
+        
+}

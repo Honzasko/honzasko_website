@@ -1,0 +1,22 @@
+{% extends 'page.html' %}
+{% block content %}
+{% if data | length > 0 %}
+    {% for row in data %}
+            <p>
+                <div class="article">
+                        <div class="arti-content">
+                            <a href="/article/{{row[0]}}/"><h1>{{row[1]}}</a><label>{{row[4]}}</label></h1>
+                            <span>{{row[2]}}</span>
+                        </div>
+                </div>
+            </p>
+        {% endfor %}
+{% else %}
+<div class="noproject">
+    <h2>No projects</h2>
+    </div>
+{% endif %}
+
+{% endblock %}
+{% block style %}articles.css{% endblock %}
+{% block _title %}Articles{% endblock %}

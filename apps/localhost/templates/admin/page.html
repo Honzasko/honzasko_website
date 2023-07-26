@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Admin Panel</title>
+    <style>
+            nav a{
+                margin-left: 15px;
+            }
+            table, th, td {
+  border:1px solid black;
+}
+    </style>
+  </head>
+  <body>
+    <nav><a href="/admin/">Home</a><a href="/admin/projects/">Projects</a><a href="/admin/articles/">Articles</a><a href="/admin/links/">Links</a><a href="/admin/logout">Log Out</a></nav>
+    <hr>
+  <div class="content">
+    {% block content %} {% endblock %}
+  </div>
+  </body>
+</html>

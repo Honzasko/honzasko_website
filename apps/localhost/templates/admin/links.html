@@ -1,0 +1,32 @@
+{% extends 'admin/page.html' %}
+{% block content %} 
+<h2>Links</h2>
+{% if data | length > 0 %}
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>URL</th>
+        <th>Action</th>
+    </tr>
+    {% for row in data %}
+    <tr>
+        <th>{{ row[0] }}</th>
+        <th>{{ row[1] }}</th>
+        <th>{{ row[2] }}</th>
+        <th><a href="/admin/removelink/{{row[0]}}">Remove</a></th>
+    </tr>
+        {% endfor %}
+</table>
+{% else %}
+<h3>No links</h3>
+{% endif %}
+<h2>Add Link</h2>
+<form method="post" action="/admin/addlink">
+    Title:<br>
+    <input name="title"><br>
+    Link: <br>
+    <input name="link"><br>
+    <button>Add</button>
+</form>
+{% endblock %}

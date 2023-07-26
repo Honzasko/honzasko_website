@@ -1,0 +1,13 @@
+{% extends 'admin/page.html' %}
+{% block content %} 
+<h2>Edit article</h2>
+<form method="post" action="/admin/article/edit/{{data[0][0]}}">
+Title:<br>
+<input name="title" value="{{data[0][1]}}"><br>
+Description:<br>
+<textarea name="description" >{{data[0][2]}}</textarea><br>
+Content:<br>
+<textarea name="content" >{{data[0][3]}}</textarea>
+<p><button>Update</button></p>
+</form>
+{% endblock %}

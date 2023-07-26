@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Jan Straka - {% block _title %} {% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/core.css">
+    <link rel="stylesheet" href="/static/css/{% block style %}{% endblock %}">
+  </head>
+  <body>
+    <div class="background-gradient"></div>
+    <nav>
+      <label>Jan Straka</label>
+      <div class="links">
+              <a href="/">Home</a>
+              <a href="/articles/">Articles</a>
+              <a href="/projects/">Projects</a>
+              <a href="/social/">Social</a>
+              <a href="/links/">Links</a>
+      </div>
+      <button class="mobile-menu" onclick="showMenu()"><img src="/static/img/menu.svg" height="35" width="35"></button><br>
+  </nav>
+  <div class="mobile-links">
+    <button class="close" onclick="hideMenu()"><img src="/static/img/close.svg" height="45" width="45"></button><br>
+    <a href="/"><button class="link">Home</button></a><br>
+    <a href="/articles/"><button  class="link">Articles</button></a><br>
+    <a href="/projects/"> <button  class="link">Projects</button></a><br>
+    <a href="/social/"><button  class="link">Social</button></a><br>
+    <a href="/links/"><button class="link">Links</button></a><br>
+  </div>
+  <script src="/static/js/page.js"></script>
+  <div class="content">
+    {% block content %} {% endblock %}
+  </div>
+  </body>
+</html>

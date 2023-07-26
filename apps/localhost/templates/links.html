@@ -1,0 +1,19 @@
+{% extends 'page.html' %}
+{% block content %}
+{% if data | length > 0 %}
+    {% for row in data %}
+            <p>
+                <div class="link">
+                        <a href="{{row[2]}}">{{row[1]}}</a>
+                </div>
+            </p>
+        {% endfor %}
+{% else %}
+<div class="nolink">
+    <h2>No Links</h2>
+    </div>
+{% endif %}
+
+{% endblock %}
+{% block style %}links.css{% endblock %}
+{% block _title %}Links{% endblock %}
