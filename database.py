@@ -8,8 +8,10 @@ def get_connector():
 def INSERT(sql,values):
     conn = get_connector()
     cur = conn.cursor()
-    cur.execute(sql,values);
+    cur.execute(sql,values)
     conn.commit()
+    cur.close()
+    conn.close()
 
 def Delete(sql,values):
     conn = get_connector()
@@ -60,6 +62,8 @@ def editArticle(id,title,description,content):
     cur = conn.cursor()
     cur.execute("UPDATE articles SET title=%s, description=%s, content=%s WHERE id=%s", (title, description, content, id))
     conn.commit()
+    cur.close()
+    conn.close()
 
 
 def readArticle(id):
@@ -67,6 +71,8 @@ def readArticle(id):
         cur = conn.cursor()
         cur.execute("SELECT * FROM articles where id=%s",(id,));
         rows = cur.fetchall()
+        cur.close()
+        conn.close()
         return rows
 
 def addLink(title,link):

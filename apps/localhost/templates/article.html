@@ -1,12 +1,14 @@
 {% extends 'page.html' %}
 {% block content %}
-        <div class="article">
-                    <h1><a href="/articles/"><button><img src="/static/img/back.svg" height="40" width="40"></button></a><br><a>{{data[0][1]}}</a><label>{{data[0][4]}}</label></h1>
-                    <div class="article-content" id="content">
-                    {{content|safe }}
-                    </div><br>
-        </div>
+<div class="article">
+        <h1><a href="/articles/"><button><img src="/static/img/back.svg" height="40" width="40"></button></a><br><a>{{data[0][1]}}</a><label>{{data[0][4]}}</label></h1>
+        <div class="article-content" id="content">
+                {{content|safe }}
+        </div><br>
+</div>
 
 {% endblock %}
 {% block style %}article.css{% endblock %}
 {% block _title %}{{data[0][1]}}{% endblock %}
+{% block _metaTitle %}{{data[0][1]}}{% endblock %}
+{% block _meta %}{{data[0][2]}}{% endblock %}

@@ -3,6 +3,8 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <meta name="og:title" content="{% block _metaTitle %} {% endblock %}">
+    <meta name="og:description" content="{% block _meta %} {% endblock %}">
     <title>Jan Straka - {% block _title %} {% endblock %}</title>
     <link rel="stylesheet" href="/static/css/core.css">
     <link rel="stylesheet" href="/static/css/{% block style %}{% endblock %}">

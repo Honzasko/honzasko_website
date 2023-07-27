@@ -65,7 +65,6 @@ def login():
 @admin.before_request
 def admin_before():
     token = request.cookies.get("janstraka.xyz-auth")
-    print(token)
     check = database.AuthUser(token)
     if len(check) != 1:
         return redirect("/admin/login/")
