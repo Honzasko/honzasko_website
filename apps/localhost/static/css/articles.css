@@ -18,6 +18,7 @@
 }
 
 .article {
+    margin-top: 4%;
     z-index: 1;
     color:white;
     background-color: rgba(43, 43, 43, 0.7);

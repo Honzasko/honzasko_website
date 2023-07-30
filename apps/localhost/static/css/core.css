@@ -93,10 +93,12 @@ nav .links {
 .mobile-links {
     font-family: 'Outfit', sans-serif;
     position: absolute;
+    top:0;
     z-index: 3;
     height: 100%;
     width: 100%;
     background: white;
+    background-attachment:fixed;
     box-shadow: #2b2b2b;
     text-align: center;
     overflow: hidden;
