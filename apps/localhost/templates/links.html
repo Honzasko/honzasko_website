@@ -1,13 +1,13 @@
 {% extends 'page.html' %}
 {% block content %}
 {% if data | length > 0 %}
-    {% for row in data %}
-            <p>
-                <div class="link">
-                        <a href="{{row[2]}}">{{row[1]}}</a>
-                </div>
-            </p>
+<div class="link-container">
+        {% for row in data %}
+        <div class="_link">
+        <a href="{{row[2]}}">{{row[1]}}</a>
+        </div>
         {% endfor %}
+</div>
 {% else %}
 <div class="nolink">
     <h2>No Links</h2>
@@ -18,3 +18,4 @@
 {% block style %}links.css{% endblock %}
 {% block _title %}Links{% endblock %}
 {% block _metaTitle %}Links{% endblock %}
+{% block _meta %}Refferal,affilate,non-social site links {% endblock %}

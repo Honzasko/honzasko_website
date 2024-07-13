@@ -1,0 +1,49 @@
+.mypc {
+    margin: auto;
+    background-color: rgba(43, 43, 43, 0.7);
+    color:white;
+    min-width: 550px;
+    max-width: 550px;
+    min-height: 450px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    left:50%;
+    top:20%;
+    transform: translate(-50%);
+    -webkit-box-shadow: -1px 1px 32px 8px rgba(0,0,0,0.2);
+    -moz-box-shadow: -1px 1px 32px 8px rgba(0,0,0,0.2);
+    box-shadow: -1px 1px 32px 8px rgba(0,0,0,0.2);
+    font-size: 20px;
+}
+
+.mypc .title {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    position: relative;
+}
+
+.mypc b {
+    font-weight: 900;
+}
+
+
+@media (pointer:none), (pointer:coarse) {
+
+
+.mypc {
+    position: absolute;
+    left:50%;
+    top:20%;
+    min-height: 20rem;
+    max-height: 75%;
+    min-width: 90%;
+    max-width: 90%;
+}
+
+}

@@ -40,6 +40,9 @@ def article(id):
 def links():
     return render_template("links.html",data=database.readLinks())
 
+@local.route("/mypc/")
+def mypc():
+    return render_template("mypc.html")
 
 @local.route("/admin/login/")
 def admin_login():

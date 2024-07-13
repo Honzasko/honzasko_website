@@ -45,11 +45,16 @@ nav .links a {
     margin-left: 20px;
     text-decoration: none;
     color: white;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 7.5px;
 }
 
 nav .links a:hover {
     cursor:pointer;
-    text-decoration: underline;
+    background-color: #39775b;
+
 }
 
 
